@@ -1,8 +1,18 @@
 <h2>Product Details</h2>
 
-<div *ngIf="product">
-  <h3>{{ product.name }}</h3>
-  <h4>{{ product.price | currency }}</h4>
-  <p>{{ product.description }}</p>
+  <h3>{{ product.name }} </h3>
 
-</div>
+  <p *ngIf="product.description">
+    Description: {{ product.description }}
+  </p>
+
+<button (click)="addToCart(product)">Buy</button>
+<br/><br/>
+<button (click)="share()">
+  Share
+</button>
+
+<app-product-alerts
+  [product]="product"
+  (notify)="onNotify()">
+</app-product-alerts>
