@@ -33,5 +33,25 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 Install angular cli component:  
 npm install -g @angular/cli  
 
+Be carreful when you use the command ng serve you can obtain the following error:  
+```ERROR in ./src/polyfills.ts
+  Module not found: Error: Can't resolve 'core-js/es6/reflect' in 'C:\Users\meynier\data\git\angular\Angular8-Tutorial\src'
+  ERROR in ./src/polyfills.ts
+  Module not found: Error: Can't resolve 'core-js/es7/reflect' in 'C:\Users\meynier\data\git\angular\Angular8-Tutorial\src'
+  ** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+  i ｢wdm｣: Failed to compile.
+  i ｢wdm｣: Compiling...
+```
+To correct you just have to change file src/polyfills.ts  
+```
+import 'core-js/es6/reflect';  
+import 'core-js/es7/reflect';  
+```
+to  
+```
+import 'core-js/es/reflect';  
+import 'core-js/es/reflect';  
+```
+
 Launch local server :  
 ng serve --open  
