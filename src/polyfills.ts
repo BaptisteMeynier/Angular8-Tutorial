@@ -29,7 +29,6 @@
  * compiled using JIT.
  */
 import 'core-js/es/reflect';
-import 'core-js/es/reflect';
 
 /**
  * Web Animations `@angular/platform-browser/animations`
